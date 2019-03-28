@@ -217,16 +217,14 @@ static Shortcut shortcuts[] = {
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
 	{ MODKEY|ShiftMask,     XK_Prior,       zoom,           {.f = +1} },
 	{ MODKEY|ShiftMask,     XK_Next,        zoom,           {.f = -1} },
-	{ MODKEY,	        XK_o,	        zoomreset,	{.f =  0} },
-	{ MODKEY,	        XK_p,	        zoomabs,	{.f =  8.} },
+	{ MODKEY,	            XK_o,	        zoomreset,	    {.f =  0} },
+    { MODKEY,	            XK_p,	        zoomabs,	    {.f =  8.} },
 	{ MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
 	{ MODKEY|ShiftMask,     XK_Up,          zoom,           {.f = +1} },
 	{ MODKEY|ShiftMask,     XK_Down,        zoom,           {.f = -1} },
-	{ MODKEY|ShiftMask,     XK_K,           zoom,           {.f = +1} },
-	{ MODKEY|ShiftMask,     XK_J,           zoom,           {.f = -1} },
-	{ MODKEY|ShiftMask,     XK_U,           zoom,           {.f = +2} },
-	{ MODKEY|ShiftMask,     XK_D,           zoom,           {.f = -2} },
-    	{ MODKEY,		XK_a,		externalpipe,	{ .v = openurlcmd } },
+	{ MODKEY,               XK_u,           zoom,           {.f = +1} },
+	{ MODKEY,               XK_i,           zoom,           {.f = -1} },
+    { MODKEY,		        XK_a,		    externalpipe,	{ .v = openurlcmd } },
 };
 
 /*
