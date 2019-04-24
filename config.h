@@ -213,7 +213,8 @@ static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i = 0} },
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i = 0} },
-	{ ControlMask,          XK_V,           clippaste,      {.i = 0} },
+	{ MODKEY,               XK_g,           clippaste,      {.i = 0} },
+	{ MODKEY,               XK_c,           clipcopy,       {.i = 0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i = 0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i = 0} },
 	{ MODKEY|ShiftMask,     XK_Prior,       zoom,           {.f = +1} },
