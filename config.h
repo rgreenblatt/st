@@ -196,13 +196,13 @@ static MouseShortcut mshortcuts[] = {
 #define MODKEY Mod4Mask
 
 MouseKey mkeys[] = {
-	/* button               mask            function        argument */
-	{ Button4,              ShiftMask,      kscrollup,      {.i =  1} },
-	{ Button5,              ShiftMask,      kscrolldown,    {.i =  1} },
-	{ Button4,              MODKEY,         kscrollup,      {.i =  1} },
-	{ Button5,              MODKEY,         kscrolldown,    {.i =  1} },
-	{ Button4,              MODKEY|ShiftMask,         zoom,      {.f =  +1} },
-	{ Button5,              MODKEY|ShiftMask,         zoom,    {.f =  -1} },
+	/* button mask function argument */
+	{ Button4, ShiftMask,        kscrollup,   {.i = 1} },
+	{ Button5, ShiftMask,        kscrolldown, {.i = 1} },
+	{ Button4, MODKEY,           kscrollup,   {.i = 1} },
+	{ Button5, MODKEY,           kscrolldown, {.i = 1} },
+	{ Button4, MODKEY|ShiftMask, zoom,        {.f = +1} },
+	{ Button5, MODKEY|ShiftMask, zoom,        {.f = -1} },
 };
 
 static char *openurlcmd[] = { "/bin/sh", "-c",
@@ -210,23 +210,24 @@ static char *openurlcmd[] = { "/bin/sh", "-c",
     "externalpipe", NULL };
 
 static Shortcut shortcuts[] = {
-	/* mask                 keysym          function        argument */
-	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i = 0} },
-	{ ControlMask,          XK_Print,       toggleprinter,  {.i = 0} },
-	{ MODKEY,               XK_g,           clippaste,      {.i = 0} },
-	{ MODKEY,               XK_c,           clipcopy,       {.i = 0} },
-	{ ShiftMask,            XK_Print,       printscreen,    {.i = 0} },
-	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i = 0} },
-	{ MODKEY|ShiftMask,     XK_Prior,       zoom,           {.f = +1} },
-	{ MODKEY|ShiftMask,     XK_Next,        zoom,           {.f = -1} },
-	{ MODKEY,	              XK_o,	          zoomreset,	    {.f = 0} },
-  { MODKEY,	              XK_p,	          zoomabs,	      {.f = 8.} },
-	{ MODKEY,               XK_Control_L,   iso14755,       {.i = 0} },
-	{ MODKEY|ShiftMask,     XK_Up,          zoom,           {.f = +1} },
-	{ MODKEY|ShiftMask,     XK_Down,        zoom,           {.f = -1} },
-	{ MODKEY,               XK_u,           zoom,           {.f = +1} },
-	{ MODKEY,               XK_i,           zoom,           {.f = -1} },
-  { MODKEY,		            XK_a,		        externalpipe,	  { .v = openurlcmd } },
+	/* mask keysym function argument */
+	{ XK_ANY_MOD,       XK_Break,     sendbreak,     {.i = 0} },
+	{ ControlMask,      XK_Print,     toggleprinter, {.i = 0} },
+	{ MODKEY,           XK_g,         clippaste,     {.i = 0} },
+	{ MODKEY,           XK_c,         clipcopy,      {.i = 0} },
+	{ ShiftMask,        XK_Print,     printscreen,   {.i = 0} },
+	{ XK_ANY_MOD,       XK_Print,     printsel,      {.i = 0} },
+	{ MODKEY|ShiftMask, XK_Prior,     zoom,          {.f = +1} },
+	{ MODKEY|ShiftMask, XK_Next,      zoom,          {.f = -1} },
+	{ MODKEY,	          XK_o,	        zoomreset,	   {.f = 0} },
+  { MODKEY,	          XK_p,	        zoomabs,	     {.f = 8.} },
+	{ MODKEY|ShiftMask, XK_P,         zoomabs,       {.f = 12.} },
+	{ MODKEY,           XK_Control_L, iso14755,      {.i = 0} },
+	{ MODKEY|ShiftMask, XK_Up,        zoom,          {.f = +1} },
+	{ MODKEY|ShiftMask, XK_Down,      zoom,          {.f = -1} },
+	{ MODKEY,           XK_u,         zoom,          {.f = +1} },
+	{ MODKEY,           XK_i,         zoom,          {.f = -1} },
+  { MODKEY,		        XK_a,		      externalpipe,	 { .v = openurlcmd } },
 };
 
 /*
